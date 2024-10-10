@@ -110,12 +110,13 @@ let users = [
 function userTeller(users, name, cb) {
   for (let i = 0; i < users.length; i++) {
     if (name === users[i].name) {
-      const age =  users[i  ].answer(users[i].age); 
+      const age =  users[i].answer(users[i].age); 
       return `${users[i].name} ${age} ${cb(users[i].name, users[i].favoriteColor)}`; 
     }
   }
   return `User ${name} not found.`; 
 }
+
 let result1 = userTeller(users, "Abby", (name, color) => `${name} likes ${color} color`);
 let result2 = userTeller(users, "Bright", (name, color) => `${name} likes ${color} color`);
 let result3 = userTeller(users, "Cher", (name, color) => `${name} likes ${color} color`);
